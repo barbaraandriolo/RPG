@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="RPG game d20 roller">
+    <title> Menu </title>
+    <link rel="stylesheet" href="./menu.css">
+  </head>
+
+<body>
+<h1> Jogo X </h1>
+
+<h2> Seja bem vindo(a) à sua primeira aventura! Antes de começá-la, preencha as informações abaixo e boa sorte aventureiro!</h2>
+
+<form action="/processar-dados" method="post" id="formulario">
+    <label for="nome">Nome:</label>
+    <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
+  
+    <label for="email">Idade:</label>
+    <input type="number" id="idade" name="idade" placeholder="Digite sua idade" required>
+  
+    <select id="Classes" onchange="classeRaca()">
+        <optgroup label="Classes">
+          <option value="Arqueiro">Arqueiro</option>
+          <option value="Bárbaro">Bárbaro</option>
+          <option value="Bardo">Bardo</option>
+          <option value="Clérigo">Clérigo</option>
+          <option value="Druida">Druida</option>
+          <option value="Guerreiro">Guerreiro</option>
+          <option value="Ladino">Ladino</option>
+          <option value="Mago">Mago/Feiticeiro</option>
+          <option value="Monge">Monge</option>
+          <option value="Paladino">Paladino</option>
+        </optgroup>
+      </select>
+    
+      <select id="Raca" onchange="classeRaca()">
+        <optgroup label="Raças">
+          <option value="Anão">Anão</option>
+          <option value="Criatura">Criatura</option>
+          <option value="Elfo">Elfo</option>
+          <option value="Goblin">Goblin</option>
+          <option value="Híbrido">Hibrido</option>
+          <option value="Humano">Humano</option>
+          <option value="Orc">Orc</option>
+          
+
+        </optgroup>
+      </select>
+    
+    <h3> Conforme a raça e classe escolhida, seus atributos são:</h3>
+    <p id="p_classe"></p>
+    
+    
+    
+    <h3>Caso esteja pronta para iniciar a sua aventura, clique em Começar!</h3>
+    <input type="submit" value="Enviar">
+  </form>
+
+
+
+  
+<script src="https://www.gstatic.com/firebasejs/9.0.2/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.0.2/firebase-database.js"></script>
+<script src="../JS/menu.js"></script> 
+
+  
+
+</body>
+</html>
